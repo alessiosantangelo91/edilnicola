@@ -1,0 +1,17 @@
+.msg {
+  margin: 1.5rem 0 0 0;
+  font-size: 1.4rem;
+
+  &.msg--sent {
+    color: color(green);
+  }
+
+  &.msg--error {
+    color: color(#cc3426);
+  }
+}
+
+.error {
+  color: #cc3426;
+  font-size: 1.1rem;
+}

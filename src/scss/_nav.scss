@@ -1,0 +1,93 @@
+$config: (
+  height: 8rem
+);
+
+.nav {
+  display: flex;
+  height: map-get($config, height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.nav__container {
+  display: flex;
+  position: relative;
+  padding: 0 4rem;
+
+  @media screen and (min-width: 768px) {
+    padding: 0;
+  }
+}
+
+.nav__logo {
+  align-items: center;
+  display: flex;
+  font-family: font(logo);
+  font-size: 1.4rem;
+  height: 100%;
+  text-decoration: none;
+}
+
+.nav__logo__img {
+  fill: color(red);
+  height: map-get($config, height) / 2;
+  margin-right: 10px;
+}
+
+.nav__logo__text {
+  color: color(white);
+  font-family: font(heading);
+  font-size: 2rem;
+  letter-spacing: 0.45rem;
+  padding-top: 0.5rem;
+  text-transform: uppercase;
+}
+
+.nav__contacts {
+  display: none;
+  font-family: font(logo);
+  font-size: 1.4rem;
+  height: 100%;
+  position: absolute;
+  right: 0;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+    //&.is-visible {
+      visibility: visible;
+      opacity: 1;
+    //}
+  }
+
+  li {
+    align-items: center;
+    display: flex;
+    margin-right: 2rem;
+  }
+
+  a {
+    color: inherit;
+    transition: color 0.3s;
+
+    &:hover {
+      color: color(white);
+    }
+  }
+}
+
+#navSentinel {
+  position: absolute;
+  display: block;
+  visibility: hidden;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+}

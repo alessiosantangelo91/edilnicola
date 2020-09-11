@@ -1,0 +1,26 @@
+.menu {
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-top: 0.5rem;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu li {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.menu li a {
+  color: color(white);
+  font-family: font(heading);
+  font-size: 2rem;
+  justify-content: flex-end;
+  letter-spacing: 0.45rem;
+  text-transform: uppercase;
+}

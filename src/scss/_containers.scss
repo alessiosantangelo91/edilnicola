@@ -1,0 +1,129 @@
+.container {
+  margin: 0 auto;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    max-width: map-get($containers, medium);
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: map-get($containers, large);
+  }
+}
+
+.section {
+  display: flex;
+  padding: 5.5rem 0;
+}
+
+.section__row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  @media screen and (min-width: 960px) {
+    flex-direction: row;
+  }
+}
+
+.section__col {
+  flex-wrap: nowrap;
+  padding: 4rem;
+
+  &.section__col--master {
+    align-self: center;
+    flex: 0 0 100%;
+
+    @media screen and (min-width: 960px) {
+      flex: 0 0 40%;
+    }
+
+    .section.section-reverse & {
+      @media screen and (min-width: 960px) {
+        order: 2;
+      }
+    }
+  }
+
+  &.section__col--slave {
+    padding: 0;
+    position: relative;
+    flex: 0 0 100%;
+
+    @media screen and (min-width: 960px) {
+      flex: 0 0 60%;
+      padding: 4rem;
+    }
+
+    .section.section-reverse & {
+      @media screen and (min-width: 960px) {
+        order: 1;
+      }
+    }
+  }
+}
+
+#contacts .section__col.section__col--master {
+  align-self: flex-start;
+  padding-top: 6rem;
+}
+
+.section__title {
+  display: inline-block;
+  position: relative;
+
+  &:after {
+    background: color(red);
+    content: '';
+    display: block;
+    height: 0.3rem;
+    transition: transform 0.3s cubic-bezier(.75,-0.5,0,1.75) 0.9s;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 30%;
+  }
+
+  &.is-animated:after {
+    transform: scaleX(1);
+  }
+}
+
+.section__col__img {
+  max-width: 100%;
+}
+
+.section.section--slider > .container {
+  @media screen and (min-width: 768px) {
+    padding: 4rem;
+  }
+}
+
+.section.section--slider h3,
+.section.section--slider p {
+  padding: 0 4rem;
+
+  @media screen and (min-width: 768px) {
+    padding: 0;
+  }
+}
+
+.section__biglink {
+  padding: 3rem;
+  text-align: center;
+  display: block;
+  width: 100%;
+  transition: all 0.3s;
+  background: color(black);
+
+  @media screen and (min-width: 768px) {
+    letter-spacing: 1rem;
+  }
+
+  @media screen and (min-width: 1024px) {
+    letter-spacing: 2rem;
+  }
+
+  &:hover {
+    background: rgba(color(white), 0.1);
+  }
+}

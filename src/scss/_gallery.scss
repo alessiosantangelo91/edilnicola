@@ -1,0 +1,36 @@
+.gallery {
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 15rem 0 5rem 0;
+}
+
+.gallery__intro {
+  padding: 3rem;
+}
+
+.gallery__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 5rem;
+}
+
+.gallery__item {
+  display: flex;
+  flex: 0;
+  object-fit: contain;
+  width: 90%;
+  margin: 1.5rem auto;
+
+  @media screen and (min-width: 768px) {
+    width: 48%;
+    margin: 1%;
+    flex: 1;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 31%;
+    margin: 1%;
+  }
+}

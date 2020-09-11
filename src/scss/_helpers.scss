@@ -1,0 +1,23 @@
+@function font($font) {
+  @return map-get($fonts, $font);
+}
+
+@function color($color) {
+  @return map-get($colors, $color);
+}
+
+.c-white {
+  color: color(white);
+}
+
+.c-red {
+  color: color(red);
+}
+
+.c-black {
+  color: color(black);
+}
+
+.no-underline {
+  text-decoration: none;
+}

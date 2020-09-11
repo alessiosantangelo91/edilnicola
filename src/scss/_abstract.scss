@@ -1,0 +1,44 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  outline: none;
+}
+
+body {
+  background: color(black);
+  color: rgba(color(white), 0.4);
+  font-family: font(copy);
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 2.5rem;
+}
+
+strong {
+  font-weight: 700;
+}
+
+a,
+svg,
+button {
+  cursor: pointer;
+}

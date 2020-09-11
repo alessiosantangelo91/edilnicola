@@ -6,6 +6,9 @@ export default function Contacts() {
     const [name, onChangeName] = useState('');
     const [email, onChangeEmail] = useState('');
     const [content, onChangeContent] = useState('');
+    const [isFormSubmitted, onFormSubmit] = useState(false)
+
+    const isValid = val => val && val !== ''
 
     return (
         <section className="section" id="contacts">
@@ -29,8 +32,7 @@ export default function Contacts() {
                             Grazie di averci contattato! Ti risponderemo non appena possibile.
                         </p>
                         <p className="msg msg--error">
-                            Si è verificato un errore nell'invio della mail.<br />
-                                                            Riprova tra qualche secondo oppure ricarica la pagina.
+                            Si è verificato un errore nell'invio della mail.<br />Riprova tra qualche secondo oppure ricarica la pagina.
                         </p>
                     </div>
                     <div className="section__col section__col--slave">
@@ -38,28 +40,27 @@ export default function Contacts() {
                             <p>
                                 <label htmlFor="name" className="c-white">Nome</label>
                                 <input type="text" name="name" value={name} autoComplete="off" placeholder="Il tuo nome" required onChange={(e) => { onChangeName(e.target.value) }} />
-                                <span className="error" htmlFor="name">Questo campo è obbligatorio</span>
+                                {isFormSubmitted && !isValid(name) && (<span className="error">Questo campo è obbligatorio</span>)}
                             </p>
                             <p>
                                 <label htmlFor="email" className="c-white">Email</label>
-                                <input type="email" name="email" value={email} autoComplete="off" placeholder="Il tuo indirizzo email" onChange={(e) => { onChangeEmail(e.target.value) }}
-                                    required />
-                                <span className="error" htmlFor="email">Questo campo è obbligatorio</span>
+                                <input type="email" name="email" value={email} autoComplete="off" placeholder="Il tuo indirizzo email" onChange={(e) => { onChangeEmail(e.target.value) }} required />
+                                {isFormSubmitted && !isValid(email) && (<span className="error">Questo campo è obbligatorio</span>)}
                             </p>
                             <p>
                                 <label htmlFor="content" className="c-white">Cosa vuoi chiederci?</label>
                                 <textarea name="content" placeholder="Vorrei informazioni su..." autoComplete="off" required onChange={(e) => { onChangeContent(e.target.value) }} value={content}>                                    </textarea>
-                                <span className="error" htmlFor="content">Questo campo è obbligatorio</span>
+                                {isFormSubmitted && !isValid(content) && (<span className="error">Questo campo è obbligatorio</span>)}
                             </p>
                             <p>
-                                <a className="button" id="submit" target="_blank">
+                                <span className="button" id="submit" target="_blank" onClick={() => onFormSubmit(!isFormSubmitted)}>
                                     <svg viewBox="0 0 180 60">
                                         <path
                                             d="M10,10 C10,10 50,9.98999977 90,9.98999977 C130,9.98999977 170,10 170,10 C170,10 170.009995,20 170.009995,30 C170.009995,40 170,50 170,50 C170,50 130,50.0099983 90,50.0099983 C50,50.0099983 10,50 10,50 C10,50 9.98999977,40 9.98999977,30 C9.98999977,20 10,10 10,10 Z">
                                         </path>
                                     </svg>
                                     <span>Invia</span>
-                                </a>
+                                </span>
                             </p>
                         </form>
                     </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function Lines() {
-    const lines = new Array(6).fill(0)
+    const lines = new Array(10).fill(0)
 
     return (
         <div>

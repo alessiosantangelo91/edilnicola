@@ -10,7 +10,7 @@ import HomeIntro from '../components/Home/Intro'
 import precisione from '../media/precisione.jpg'
 import attrezzatura from '../media/attrezzatura.jpg'
 import sicurezza from '../media/sicurezza.jpg'
-
+import duraturo from '../media/duraturo.jpg'
 
 export default function Home() {
     return (
@@ -26,11 +26,22 @@ export default function Home() {
             </Section>
 
             <Section>
-                <SectionContent title="Qualsiasi riparazione">
+                <SectionContent title="Qualsiasi intervento">
                     <p>Siamo in grado di svolgere qualunque tipo di intervento edile, dalla muratura all'impiantistica idrica ed elettrica, dalle riparazioni alle costruzioni.<br /></p>
-                    <p>Utilizziamo solo i migliori materiali che acquistiamo da fornitori esperti come <a className="c-white" href="http://www.edilcelle.bigmat.it/site/home.html" target="_blank">Edilcelle</a>.<br />Utilizziamo attrezzatura di alta qualità <a href="https://www.hilti.it/" target="_blank" className="c-white">Hilti</a>.</p>
+                    <p>Utilizziamo solo i migliori materiali che acquistiamo da fornitori esperti come <a className="c-white" href="http://www.edilcelle.bigmat.it/site/home.html" target="_blank">Edilcelle</a>.<br /><br />Utilizziamo attrezzatura di alta qualità <a href="https://www.hilti.it/" target="_blank" className="c-white">Hilti</a>.</p>
                 </SectionContent>
                 <SectionImage image={attrezzatura}></SectionImage>
+            </Section>
+
+            <Section>
+                <SectionContent title="Fatti per durare">
+                    <p>Eseguiamo interventi professionali con assoluta dedizione.<br /></p>
+                    <p>Affidarti a noi è &nbsp;
+                        <Link to="/cantieri" className="c-white">garanzia di un lavoro duraturo</Link>,
+                        fatto per restare. Provare per credere.
+                    </p>
+                </SectionContent>
+                <SectionImage image={duraturo}></SectionImage>
             </Section>
 
             <Section>

@@ -21,13 +21,13 @@
 }
 
 .line-overlay .line-overlay__item {
-  border-right: 1px solid rgba(color(white), 0.16);
+  border-right: 1px solid rgba(color(white), 0.10);
   flex: 1 1 auto;
   height: 100%;
 }
 
 .line-overlay--horizontal .line-overlay__item {
-  border-bottom: 1px solid rgba(color(white), 0.16);
+  border-bottom: 1px solid rgba(color(white), 0.10);
   border-right: none;
   height: auto;
   width: 100%;

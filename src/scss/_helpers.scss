@@ -6,6 +6,10 @@
   @return map-get($colors, $color);
 }
 
+.flex {
+  display: flex;
+}
+
 .c-white {
   color: color(white);
 }

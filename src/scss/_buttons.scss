@@ -1,34 +1,23 @@
 .button {
   display: flex;
-  flex-direction: column;
-  height: 60px;
+  align-items: center;
   justify-content: center;
-  opacity: 1;
   text-decoration: none;
-  width: 180px;
   color: color(white);
   position: relative;
   font-size: 1.6rem;
   text-transform: uppercase;
   font-family: font(heading);
+  text-align: center;
   letter-spacing: 0.5rem;
   margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  min-width: 20rem;
+  border: 0.2rem solid color(white);
+  background-color: transparent;
+  transition: all 0.3s ease-out;
 
-  span {
-    padding-top: 0.2rem;
-    text-align: center;
-    text-shadow: 0 2px 7.5px rgba(0, 0, 0, 0.25);
+  &:hover {
+    border-color: color(red);
   }
-}
-
-.button svg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  stroke-width: 1;
-  fill: none;
-  fill-rule: evenodd;
-  stroke: currentColor;
 }

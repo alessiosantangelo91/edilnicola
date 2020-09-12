@@ -1,20 +1,24 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import React from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-import Home from './pages/Home';
-import Cantieri from './pages/Cantieri';
+import Home from './app/pages/Home'
+import Works from './app/pages/Works'
+import Contacts from './app/pages/Contacts'
 
-import Heading from './components/Heading';
-import Lines from './components/Lines';
+import Nav from './app/components/Nav'
+import Lines from './app/components/Lines'
 
 function App() {
   return (
     <Router>
       <Lines></Lines>
-      <Heading></Heading>
+      <Nav></Nav>
       <Switch>
         <Route path="/cantieri">
-          <Cantieri></Cantieri>
+          <Works></Works>
+        </Route>
+        <Route path="/contatti">
+          <Contacts></Contacts>
         </Route>
         <Route path="/">
           <Home></Home>

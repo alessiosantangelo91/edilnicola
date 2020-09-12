@@ -31,24 +31,6 @@ p {
   line-height: 2.2rem;
   letter-spacing: 0.1rem;
   margin-bottom: 2.5rem;
-
-  .section__col--master & {
-    opacity: 0;
-    transform: translateY(2.5rem);
-    transition: all 0.8s ease-in;
-
-    @for $i from 0 to 8 {
-      &:nth-child(#{$i + 1}) {
-        transition-delay: 0.5s * $i
-      }
-    }
-    
-  }
-
-  .section--in-view .section__col--master & {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 strong {

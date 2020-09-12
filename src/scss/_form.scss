@@ -1,29 +1,29 @@
-form {
+.form {
   margin: 2.5rem 0;
   padding: 0 4rem 4rem 4rem;
 }
 
-form p {
+.form__field {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
+  
+  & + & {
+    margin-top: 1.5rem;
+  }
 }
 
-label {
+.form__field__label {
   font-family: font(heading);
   font-size: 1.8rem;
   letter-spacing: 0.3rem;
   margin: 0.5rem 0 0.5rem 0;
   text-transform: uppercase;
   padding-right: 2rem;
-
-  &:first-of-type {
-    margin-top: 0;
-  }
 }
 
-input,
-textarea {
+.form__field__input,
+.form__field__textarea {
   background: transparent;
   border: 1px solid rgba(color(white), 0.55);
   border-radius: 3px;
@@ -44,19 +44,6 @@ textarea {
   }
 }
 
-textarea {
+.form__field__textarea {
   min-height: 20rem;
-}
-
-form .button {
-  margin: 0 0 0 -1rem;
-}
-
-.contact {
-  display: flex;
-  align-items: center;
-
-  @media screen and (min-width: 769px) {
-    display: none;
-  }
 }

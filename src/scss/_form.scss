@@ -42,8 +42,21 @@
   &:active {
     border-color: color(white);
   }
+
+  &.has-error,
+  &.has-error:focus,
+  &.has-error:active {
+    border-color: color(red);
+  }
 }
 
 .form__field__textarea {
   min-height: 20rem;
+}
+
+.form__field__error {
+  font-size: 1.2rem;
+  color: color(red);
+  margin-top: 0.5rem;
+  letter-spacing: 0.2rem;
 }

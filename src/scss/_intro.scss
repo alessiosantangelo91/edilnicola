@@ -48,6 +48,10 @@
 }
 
 .intro__footer {
-  display: flex;
+  display: none;
   justify-content: space-between;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 }

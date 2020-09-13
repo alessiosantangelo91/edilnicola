@@ -6,6 +6,7 @@ import Works from './app/pages/Works'
 import Contacts from './app/pages/Contacts'
 
 import Nav from './app/components/Nav'
+import Footer from './app/components/Footer'
 import Lines from './app/components/Lines'
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Home></Home>
         </Route>
       </Switch>
+      <Footer></Footer>
     </Router>
   );
 }

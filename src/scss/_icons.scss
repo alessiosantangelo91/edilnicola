@@ -1,0 +1,18 @@
+.icon-circle {
+  $offset: 2rem;
+  $size: (map-get($config, height) / 4) + $offset;
+
+  background: rgba(color(red), 0.65);
+  border-radius: 100%;
+  display: flex;
+  height: $size;
+  margin-right: 1rem;
+  padding: $offset / 2;
+  text-align: center;
+  width: $size;
+}
+
+.icon-circle .icon-circle__img {
+  fill: color(white);
+  height: map-get($config, height) / 4;
+}

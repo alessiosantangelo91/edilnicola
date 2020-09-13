@@ -1,0 +1,24 @@
+.container {
+  margin: 0 auto;
+  width: calc(100% - 4rem);
+  
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    max-width: map-get($containers, medium);
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: map-get($containers, large);
+  }
+}
+
+.container--section {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 55%;
+    column-gap: 5.5rem;
+  }
+}

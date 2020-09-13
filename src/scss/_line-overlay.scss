@@ -1,0 +1,34 @@
+.line-overlay {
+  align-items: stretch;
+  bottom: 0;
+  display: none;
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 200;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.line-overlay--horizontal {
+  flex-direction: column;
+}
+
+.line-overlay__item {
+  border-right: 1px solid rgba(color(white), 0.10);
+  flex: 1 1 auto;
+  height: 100%;
+}
+
+.line-overlay--horizontal .line-overlay__item {
+  border-bottom: 1px solid rgba(color(white), 0.10);
+  border-right: none;
+  height: auto;
+  width: 100%;
+}

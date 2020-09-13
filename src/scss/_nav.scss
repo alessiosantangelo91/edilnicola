@@ -4,7 +4,7 @@ $config: (
 
 .nav {
   display: flex;
-  background: linear-gradient(to bottom, color(black) 85%, rgba(color(black), 0.05));
+  background: color(black);
   height: map-get($config, height);
   position: fixed;
   top: 0;
